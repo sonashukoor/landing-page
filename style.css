@@ -1,0 +1,325 @@
+:root {
+    --primary-color: #003049;
+    --secondary-color: #ee5f00;
+    --accent-color: #fcbf49;
+    --background-color: #eae2b7;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+nav {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-top: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a.active {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    color: #ffffff;
+}
+
+nav a.active:hover {
+    background: #fcbf49;
+}
+
+input.search {
+    width: 539.594px;
+    height: 45px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border:none;
+    outline: none;
+    background: #f3f2f2;
+    font-size: 15px;
+    transition: box-shadow 0.3s;
+}
+
+input.search:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sign {
+    margin-left: auto;
+    cursor: pointer;
+}
+.sign:hover {
+    background: #f0f0f0; /* Change background on hover */
+    cursor: pointer;
+}
+
+.Company-image {
+    width: 100%;
+    height: 500px;
+    background-image: url('images/artsans-main.png');
+    background-size: cover;
+    background-position: center;
+    margin-top: 90px;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.Company-image:hover .overlay {
+    opacity: 0.8;
+    background-color: rgba(194, 3, 3, 0.459);
+}
+
+.main-text {
+    font-family: "Kablammo", cursive;
+    font-size: 7em;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 100px 50px;
+}
+
+.section-seek {
+    background: var(--primary-color);
+    color: white;
+}
+
+.section-about {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.section-team {
+    background: var(--background-color);
+    color: var(--secondary-color);
+}
+
+.heading {
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align:center;
+}
+
+.text {
+    font-size: 18px;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    color:#333;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    width: 150px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.1);
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.socials {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.socials h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.popup-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.popup-content button {
+    margin: 10px 0;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ddd8d8;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+
+.popup-content button.cancel {
+    background:  rgb(189, 3, 3);
+    color: white;
+}
+
+.popup-content button:hover {
+    background: rgba(49, 47, 47, 0.473);
+}
+
+.popup-content button.cancel:hover {
+    background: rgba(121, 2, 2, 0.938);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .nav-left {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    input.search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sign {
+        margin-left: 0;
+    }
+
+    .Company-image {
+        height: 300px;
+        margin-top: 150px;
+    }
+
+    .main-text {
+        font-size: 4em;
+    }
+
+    .section {
+        padding: 50px 20px;
+    }
+
+    .heading {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kablammo&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HiddenGems</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a class="logo" href="#"><img src="images/logo.png" alt="Logo"></a>
+            <a class="active" href="#about-section">About</a>
+            <input type="text" class="search" placeholder="Search">
+        </div>
+        <a class="sign" onclick="signPopUp()">Sign In</a>
+    </nav>
+
+    <div class="Company-image">
+        <div class="overlay">
+            <div class="main-text">HIDDEN GEMS</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="section section-seek" id="company-info">
+            <h2 class="heading">Seek Them Out</h2>
+            <p class="text">Discover a treasure trove of creativity at Hidden Gems! We embark on a vibrant journey across India, unearthing extraordinary artisan works—be it stunning paintings, exquisite textiles, or unique handicrafts. Join us in celebrating the beauty of craftsmanship and the stories behind each piece!</p>
+        </div>
+
+        <div class="section section-about" id="about-section">
+            <p class="text">At Hidden Gems, we're passionate art explorers and storytellers. Our mission is to connect you with the heart and soul of India’s artisans. From intricate textiles to breathtaking paintings, we showcase the diverse talents of creators who bring magic to every creation. Let's dive into the world of artistry together!</p>
+            <h2 class="heading">Our Story</h2>
+        </div>
+
+        <div class="section section-team" id="team-section">
+            <h2 class="heading">Meet the Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <img src="images/avatar-male.jpg" alt="Team Member 1">
+                    <h3>Arjun</h3>
+                </div>
+                <div class="team-member">
+                    <img src="images/team-2.jpg" alt="Team Member 2">
+                    <h3>Arathy</h3>
+                </div>
+                <div class="team-member">
+                    <img src="images/team-3.jpg" alt="Team Member 3">
+                    <h3>Aslam</h3>
+                </div>
+                <div class="team-member">
+                    <img src="images/team-4.jpg" alt="Team Member 4">
+                    <h3>Sona</h3>
+                </div>
+                <div class="team-member">
+                    <img src="images/team-5.jpg" alt="Team Member 5">
+                    <h3>Pavitra</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="socials">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com" aria-label="Twitter"><i class="fab fa-x"></i></a>
+            <a href="https://www.instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <div class="popup" id="sign-popup">
+        <div class="popup-content">
+            <h2>Sign In As</h2>
+            <button onclick="location.href='user.html'">User</button>
+            <button onclick="location.href='artisan.html'">Artisan</button>
+            <button class="cancel" onclick="closePopUp()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function signPopUp() {
+            document.getElementById("sign-popup").style.display = "flex";
+        }
+
+        function closePopUp() {
+            document.getElementById("sign-popup").style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            const popup = document.getElementById("sign-popup");
+            if (event.target === popup) {
+                closePopUp();
+            }
+        };
+    </script>
+</body>
+</html>
